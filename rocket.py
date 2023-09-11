@@ -1,5 +1,4 @@
 import math
-import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from matplotlib.animation import FuncAnimation
@@ -43,10 +42,10 @@ print('⬜⬜⬜🟥🟧⬜⬜🟥🟧⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 # User Inputs
 print("Please input the following values to continue")
 
-area = np.longdouble(input("Cross-sectional area (m²): "))
-mass = np.longdouble(input("Rocket mass (kg): "))
-impulse = np.longdouble(input("Mass-Specific impule (s): "))
-thrust = np.longdouble(input("Thrust duration (s): "))
+area = float(input("Cross-sectional area (m²): "))
+mass = float(input("Rocket mass (kg): "))
+impulse = float(input("Mass-Specific impule (s): "))
+thrust = float(input("Thrust duration (s): "))
 
 A = area # Cross-sectional area (m^2)
 rocket_mass = mass  # kg
@@ -217,28 +216,28 @@ profile = input("Choose your thrust profile: ")
 
 if profile == '1':
     # Constant Thrust (ideal rocket)
-    max_thrust = np.longdouble(input("Enter the constant thrust value (N): "))
+    max_thrust = float(input("Enter the constant thrust value (N): "))
     thrust_profile = constant_thrust
 
 elif profile == '2':
     # Single Stage (Linear Decrease in Thrust)
-    max_thrust = np.longdouble(input("Enter the initial thrust value (N): "))
-    thrust_rate = np.longdouble(input("Enter the thrust rate (N/s): "))
+    max_thrust = float(input("Enter the initial thrust value (N): "))
+    thrust_rate = float(input("Enter the thrust rate (N/s): "))
     thrust_profile = linear_decrease_thrust
 
 elif profile == '3':
     # Multiple Stages (Stepwise Thrust Profile)
-    max_thrust_stage1 = np.longdouble(input("Enter the thrust value for stage 1 (N): "))
-    max_thrust_stage2 = np.longdouble(input("Enter the thrust value for stage 2 (N): "))
-    stage1_burn_time = np.longdouble(input("Enter the burn time for stage 1 (s): "))
-    stage2_burn_time = np.longdouble(input("Enter the burn time for stage 2 (s): "))
+    max_thrust_stage1 = float(input("Enter the thrust value for stage 1 (N): "))
+    max_thrust_stage2 = float(input("Enter the thrust value for stage 2 (N): "))
+    stage1_burn_time = float(input("Enter the burn time for stage 1 (s): "))
+    stage2_burn_time = float(input("Enter the burn time for stage 2 (s): "))
     thrust_profile = stepwise_thrust
 
 elif profile == '4':
     # Periodic Burst (Thrust Pulse Profile)
-    max_thrust_pulse = np.longdouble(input("Enter the thrust value during pulses (N): "))
-    pulse_duration = np.longdouble(input("Enter the duration of each thrust pulse (s): "))
-    pulse_period = np.longdouble(input("Enter the time between thrust pulses (s): "))
+    max_thrust_pulse = float(input("Enter the thrust value during pulses (N): "))
+    pulse_duration = float(input("Enter the duration of each thrust pulse (s): "))
+    pulse_period = float(input("Enter the time between thrust pulses (s): "))
     thrust_profile = thrust_pulse
 
 else:
