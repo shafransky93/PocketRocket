@@ -17,11 +17,16 @@ pip install numpy scipy matplotlib
 
 ### Launch Sequence 🚀
 
-Begin your adventure by cloning this repository or downloading the Python script (*rocket_simulator.py*) to your computer.
+Begin your adventure by cloning this repository or downloading the Python script (*rocketpy* or *rocket_percise.py*) to your computer.
 Open a terminal or command prompt, and navigate to the directory where you've stored the script.
 Start the simulation by executing the script with the following command:
 ```{}
-python rocket_simulator.py
+python rocket.py
+```
+or
+*Experimental and probably broken*
+```{}
+python rocket_percice.py
 ```
 
 You'll be prompted to enter various parameters for your rocket simulation, such as:
